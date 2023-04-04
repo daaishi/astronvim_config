@@ -22,6 +22,7 @@ return {
     setup_handlers = {
       -- add custom handler
       dartls = function(_, opts) require("flutter-tools").setup { lsp = opts } end,
+      tsserver = function(_, opts) require("typescript").setup { server = opts } end
     },
     config = {
       dartls = {
@@ -38,5 +39,12 @@ return {
   },
   plugins = {
     "akinsho/flutter-tools.nvim", -- add lsp plugin
+    "jose-elias-alvarez/typescript.nvim", -- add lsp plugin
+    {
+      "williamboman/mason-lspconfig.nvim",
+      opts = {
+        ensure_installed = { "tsserver" }, -- automatically install lsp
+      },
+    },
   },
 }
