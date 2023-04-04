@@ -3,10 +3,6 @@ return {
     formatting = {
       format_on_save = {
         enabled = true, -- enable format on save
-        allow_filetypes = { -- only allow formatting on save for these filetypes
-          "lua",
-          "python",
-        }
       },
       filter = function(client)
         if client.name == "lua_ls" then
