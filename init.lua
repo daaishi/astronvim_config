@@ -1,4 +1,5 @@
 return {
+  -- colorscheme = "catppuccin",
   lsp = {
     formatting = {
       format_on_save = {
@@ -51,6 +52,13 @@ return {
       cmd = "Copilot",
       event = "InsertEnter",
       config = function() vim.g.copilot_no_tab_map = true end,
-    }
+    },
+    {
+      "catppuccin/nvim",
+      as = "catppuccin",
+      config = function()
+        require("catppuccin").setup {}
+      end,
+    },
   },
 }

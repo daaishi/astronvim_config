@@ -1,6 +1,6 @@
 return {
   i = {
-    ["<C-i>"] = { '<Plug>copilot#Accept("<CR>")', noremap = true, silent = true, expr = true, script = true },
+    ["<C-i>"] = { 'copilot#Accept("<CR>")', silent = true, expr = true, script = true },
     ["≥"] = { '<Plug>(copilot-next)', silent = true},
     ["≤"] = { '<Plug>(copilot-previous)', silent = true},
   },
